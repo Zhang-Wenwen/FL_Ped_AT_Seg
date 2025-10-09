@@ -1,0 +1,5 @@
+{    
+    "raw_folder":"./nnUnet_raw",
+    "preprocessed_folder": "./nnUNet_preprocessed",
+    "predict_folder": "./nnUNet_results"
+}
