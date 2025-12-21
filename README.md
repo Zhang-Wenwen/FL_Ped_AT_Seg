@@ -3,7 +3,6 @@
 This is the implementation of paper: Cross-Cohort Federated Learning for Pediatric Abdominal Adipose Tissue Segmentation and Quantification Using Free-Breathing 3D MRI.
 
 Author: 
-Wenwen Zhang†,  Sevgi Gokce Kafali†,  Timothy Adamos,  Kelsey Kuwahara,  Ashley Dong,  Jessica Li,  Shu-Fu Shih,  Timoteo Delgado-Esbenshade BA, Shilpy Chowdhury,  Spencer Loong, Jeremy Moretz, Samuel R. Barnes,  Zhaoping Li, Shahnaz Ghahremani, Kara L. Calkins, Holden H. Wu*
 
 ![Figure 1](image/figure1-flowchart.png)
 
