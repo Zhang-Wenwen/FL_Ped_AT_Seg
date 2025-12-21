@@ -3,7 +3,7 @@
 This is the implementation of paper: Cross-Cohort Federated Learning for Pediatric Abdominal Adipose Tissue Segmentation and Quantification Using Free-Breathing 3D MRI.
 
 Author: 
-
+Wenwen Zhang†,  Sevgi Gokce Kafali†,  Timothy Adamos,  Kelsey Kuwahara,  Ashley Dong,  Jessica Li,  Shu-Fu Shih,  Timoteo Delgado-Esbenshade BA, Shilpy Chowdhury,  Spencer Loong, Jeremy Moretz, Samuel R. Barnes,  Zhaoping Li, Shahnaz Ghahremani, Kara L. Calkins, Holden H. Wu*
 
 ![Figure 1](image/figure1-flowchart.png)
 
@@ -36,7 +36,7 @@ nnUNet_raw/
 
 ### Dataset organization
 
-Each image and label pair must share the same base filename, with a ('_0000') channel suffix for multimodal data.
+Each image and label pair must share the same base filename, with a ('_0000') channel suffix for multimodal/multicontrast data.
 For example:
 ```
 imagesTr/
@@ -45,7 +45,7 @@ labelsTr/
     subject001.nii.gz
 ```
 
-If multiple modalities exist (e.g., T1, T2, FLAIR), they should be indexed as:
+If multiple contrasts exist (e.g., Out of phase, In phase), they should be indexed as:
 ```
 subject001_0000.nii.gz  # Multicontrast 1
 subject001_0001.nii.gz  # Multicontrast 2
