@@ -3,7 +3,7 @@
 This is the implementation of paper: Cross-Cohort Federated Learning for Pediatric Abdominal Adipose Tissue Segmentation and Quantification Using Free-Breathing 3D MRI.
 
 Author: 
-Wenwen Zhang†,  Sevgi Gokce Kafali†,  Timothy Adamos,  Kelsey Kuwahara,  Ashley Dong,  Jessica Li,  Shu-Fu Shih,  Timoteo Delgado-Esbenshade BA, Shilpy Chowdhury,  Spencer Loong, Jeremy Moretz, Samuel R. Barnes,  Zhaoping Li, Shahnaz Ghahremani, Kara L. Calkins, Holden H. Wu*
+
 
 ![Figure 1](image/figure1-flowchart.png)
 
@@ -34,36 +34,35 @@ nnUNet_raw/
     └── labelsTs/
 ```
 
-### File Naming Convention
+### Dataset organization
 
 Each image and label pair must share the same base filename, with a ('_0000') channel suffix for multimodal data.
 For example:
 ```
 imagesTr/
-    patient001_0000.nii.gz
+    subject001_0000.nii.gz
 labelsTr/
-    patient001.nii.gz
+    subject001.nii.gz
 ```
 
 If multiple modalities exist (e.g., T1, T2, FLAIR), they should be indexed as:
 ```
-patient001_0000.nii.gz  # Modality 1
-patient001_0001.nii.gz  # Modality 2
+subject001_0000.nii.gz  # Multicontrast 1
+subject001_0001.nii.gz  # Multicontrast 2
 ...
 ```
 ### File Naming Convention
-Each dataset folder should include a corresponding dataset.json file describing the dataset metadata, such as modality, labels, and training/testing splits. Example:
+Each dataset folder should include a corresponding dataset.json file describing the dataset metadata, such as image contrasts, labels, and training/testing splits. Example:
 ```
 {
   "name": "DatasetID1",
   "description": "Adipose tissue segmentation dataset",
   "channel_names": {
-    "0": "MRI_T1",
-    "1": "MRI_T2"
+    "0": "Out of Phase"
   },
   "labels": {
     "background": "0",
-    "tumor": "1"
+    "adipose tissue": "1"
   },
   "file_ending": ".nii.gz",
   "numTraining": 100,
